@@ -1,0 +1,51 @@
+
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">DATA </a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <br>
+<div class="container">
+  <!-- comment -->
+  <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Data JSON</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-sm-4" style="padding-bottom: 20px;" *ngFor="let bird of arrBirds" >
+            <div class="position-relative p-3 bg-gray" style="height: 180px">
+                <div class="row">
+                    <div class="col-md-3">
+                       <img class="card-img-top image-circle" width="50px" height="50px" src="../../assets/img_avatar2.png" alt="Card image cap">
+                      </div>
+        
+                      <div class="col-md-7 text-justify">
+                          <small>{{bird.title}}</small>
+                      </div>
+                      <div class="col-md-2">
+                               <a href="{{ bird.contactpoint_hasemail }}" class="text-white">
+                                 <i class="fas fa-envelope"></i> 
+                              </a> 
+                             
+                      </div>
+                  </div>
+             
+            </div>
+            <div class="position-relative p-3 bg-gray" style="height: 100px">
+                <button type="button" class="btn btn-block bg-gradient-warning btn-xs">{{bird.contactpoint_fn}}</button>
+            </div>
+          </div>
+          
+          
+        </div>
+       
+      </div>
+      <!-- /.card-body -->
+    </div>
+</div>
+
