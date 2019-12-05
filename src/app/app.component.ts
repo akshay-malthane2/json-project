@@ -23,6 +23,7 @@ export class AppComponent {
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
+        /* If error the need to handle the case differently*/
       }
     ); 
   }
